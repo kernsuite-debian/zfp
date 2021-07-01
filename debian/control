@@ -1,0 +1,46 @@
+Source: zfp
+Section: science
+Priority: optional
+Maintainer: Adrianna Pińska <adrianna.pinska@gmail.com>
+Uploaders: KERN packaging <packaging@kernsuite.info>
+Build-Depends: cmake, debhelper (>=11~)
+Standards-Version: 4.5.0
+Homepage: https://github.com/LLNL/zfp
+Vcs-Browser: https://github.com/idia-astro/zfp-deb
+Vcs-Git: https://github.com/idia-astro/zfp-deb.git
+
+Package: libzfp-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libzfp0 (= ${binary:Version}),
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: ZFP development files
+ ZFP is a compressed format for representing multidimensional floating-point and 
+ integer arrays. ZFP provides compressed-array classes that support high 
+ throughput read and write random access to individual array elements.
+ .
+ This package contains the files for application development.
+
+Package: zfp-tools
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: The ZFP compression utility
+ ZFP is a compressed format for representing multidimensional floating-point and 
+ integer arrays. ZFP provides compressed-array classes that support high 
+ throughput read and write random access to individual array elements.
+ .
+ This package contains the ZFP commandline utility.
+
+Package: libzfp0
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: The ZFP compression library
+ ZFP is a compressed format for representing multidimensional floating-point and 
+ integer arrays. ZFP provides compressed-array classes that support high 
+ throughput read and write random access to individual array elements.
+ .
+ This package contains the ZFP shared library.

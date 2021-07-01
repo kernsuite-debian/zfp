@@ -1,0 +1,15 @@
+Index: zfp-0.5.5/CMakeLists.txt
+===================================================================
+--- zfp-0.5.5.orig/CMakeLists.txt
++++ zfp-0.5.5/CMakeLists.txt
+@@ -303,3 +303,10 @@ if(BUILD_CFP)
+   install(EXPORT cfp-targets NAMESPACE zfp::
+     DESTINATION "${CMAKE_INSTALL_CMAKEDIR}")
+ endif()
++
++if(BUILD_UTILITIES)
++    install(FILES
++    "${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/zfp"
++    DESTINATION "${CMAKE_INSTALL_BINDIR}")
++endif()
++

@@ -1,0 +1,3 @@
+usr/include
+usr/lib/*/libzfp.so
+usr/lib/*/cmake
